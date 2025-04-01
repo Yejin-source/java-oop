@@ -21,7 +21,7 @@ public class MethodEx2Main {
 		s2.name = "사토루";
 		Student s3 = new Student();
 		s3.num = 3;
-		s3.name = "사토루";
+		s3.name = "유타";
 		
 		
 		// Student 변수를 디버깅하는 메서드 (디버깅 < 로깅)
@@ -55,6 +55,12 @@ public class MethodEx2Main {
 		int num = 252;
 		String[] result2 = m2.m5b(num);
 		for(String s : result2) {
+			System.out.println(s);
+		}
+		
+		int num5 = 1528;
+		String[] result5 = m2.m5b(num5);
+		for(String s : result5) {
 			System.out.println(s);
 		}
 		

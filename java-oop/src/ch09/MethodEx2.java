@@ -70,20 +70,31 @@ public class MethodEx2 {
 	}
 	
 	
-	// ! 과제 > 미완성
+	// ! 과제
 	// 반환타입: 배열
 	// 매개타입: int
-	// 252 -> {2, 5, 2}
+	// 1528 -> {1, 5, 2, 8}
 	public int[] m5a(int num) { // 나누기 연산
 		int[] result = null;
-	/*
-		for(int i=0; i<result.length; i++) {
-			if(i == result.length) {
-				result[i] = result[i] / 10 * i;
-			}
+		
+		// 복사해서 원본 값 유지
+		int temp = num; // temp: 임시로 값을 저장하는 변수로 자주 사용됨
+		
+		// 자리수 구하기
+		int length = 0;
+		while(temp > 0) {
+			temp = temp / 10; // 1528 -> 152 -> 15 -> 1 -> 0
+			length++; // length가 4면 네 자리수
 		}
-	*/	
-
+		
+		// 결과를 저장할 배열 생성
+		result = new int[length];
+	
+		// 배열에 뒤에서부터 숫자 채우기
+		for(int i=length-1; i>=0; i--) {
+			result[i] = num % 10; // 마지막 자리 숫자 저장
+			num = num / 10; // 마지막 자리수 없애기 
+		}
 		return result;
 	}
 	
