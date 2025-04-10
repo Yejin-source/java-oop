@@ -1,4 +1,4 @@
-package dto;
+package dto; // DTO -> Data Transfer Object
 
 public class Actor {
 	// 정보은닉
